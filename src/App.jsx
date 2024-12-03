@@ -19,7 +19,11 @@ function App() {
           <h2
             className="text-2xl mt-5 cursor-pointer"
             onClick={() => {
-              setActive(1);
+              if (active === 1) {
+                setActive();
+              } else {
+                setActive(1);
+              }
             }}
           >
             How many team members can I invite?

@@ -20,7 +20,7 @@ function App() {
             className="text-2xl mt-5 cursor-pointer"
             onClick={() => {
               if (active === 1) {
-                setActive();
+                setActive(0);
               } else {
                 setActive(1);
               }
@@ -43,7 +43,11 @@ function App() {
           <h2
             className="text-2xl mt-5 cursor-pointer"
             onClick={() => {
-              setActive(2);
+              if (active === 2) {
+                setActive(0);
+              } else {
+                setActive(2);
+              }
             }}
           >
             What is the maximum file upload size?
@@ -63,7 +67,11 @@ function App() {
           <h2
             className="text-2xl mt-5 cursor-pointer"
             onClick={() => {
-              setActive(3);
+              if (active === 3) {
+                setActive(0);
+              } else {
+                setActive(3);
+              }
             }}
           >
             How do I reset my password?
@@ -83,7 +91,11 @@ function App() {
           <h2
             className="text-2xl mt-5 cursor-pointer"
             onClick={() => {
-              setActive(4);
+              if (active === 4) {
+                setActive(0);
+              } else {
+                setActive(4);
+              }
             }}
           >
             Can i cancel my subscription?
@@ -103,7 +115,11 @@ function App() {
           <h2
             className="text-2xl mt-5 cursor-pointer"
             onClick={() => {
-              setActive(5);
+              if (active === 5) {
+                setActive(0);
+              } else {
+                setActive(5);
+              }
             }}
           >
             Do you provide additional Support?

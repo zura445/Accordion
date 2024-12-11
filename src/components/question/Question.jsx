@@ -1,23 +1,23 @@
 export default function Question(props) {
-  const { active, setActive, otherQuestion, number } = props;
+  const { active, setActive, question, current } = props;
 
-  console.log(props);
+  console.log(question);
 
   return (
     <div>
       <h2
         className="text-2xl mt-5 cursor-pointer"
         onClick={() => {
-          if (active === number) {
-            setActive(0);
+          if (active === current) {
+            setActive(null);
           } else {
-            setActive(number);
+            setActive(current);
           }
         }}
       >
-        {otherQuestion}
+        {question}
       </h2>
-      {active === props.number ? (
+      {active === current ? (
         <div className="flex items-center">
           <p className="mt-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum

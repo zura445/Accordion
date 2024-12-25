@@ -4,12 +4,28 @@ import Question from "./components/question/Question";
 
 function App() {
   const [active, setActive] = useState(null);
-  const questions = [
-    "How many team members can I invite?",
-    "What is the maximum file upload size?",
-    "How do I reset my password?",
-    "Can i cancel my subscription?",
-    "Do you provide additional Support?",
+  const dialog = [
+    {
+      question: "How many team members can I invite?",
+      answer: "Lorem ipsum dolor sit",
+    },
+    {
+      question: "What is the maximum file upload size?",
+      answer: "amet consectetur adipisicing elit",
+    },
+    {
+      question: "How do I reset my password?",
+      answer: "Error eos optio provident earum voluptatibus",
+    },
+    {
+      question: "Can i cancel my subscription?",
+      answer:
+        "deserunt nam a doloribus modi aperiam adipisci odio dolor culpa velit ducimus",
+    },
+    {
+      question: "Do you provide additional Support?",
+      answer: "sapiente voluptatem quis",
+    },
   ];
 
   return (
@@ -22,12 +38,13 @@ function App() {
         />
         <div className="max-w-[700px]">
           <h1>FAQ</h1>
-          {questions.map((question, index) => (
+          {dialog.map((dialog, index) => (
             <Question
               key={index}
               active={active}
               setActive={setActive}
-              question={question}
+              dialogQ={dialog.question}
+              dialogA={dialog.answer}
               current={index}
             />
           ))}

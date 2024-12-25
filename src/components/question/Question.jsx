@@ -1,7 +1,5 @@
 export default function Question(props) {
-  const { active, setActive, question, current } = props;
-
-  console.log(question);
+  const { active, setActive, dialogQ, dialogA, current } = props;
 
   return (
     <div>
@@ -15,17 +13,12 @@ export default function Question(props) {
           }
         }}
       >
-        {question}
+        {dialogQ}
       </h2>
       {active === current ? (
-        <div className="flex items-center">
-          <p className="mt-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum
-            laboriosam sequi facilis iste similique incidunt laborum amet natus
-            enim. Nisi velit deserunt doloribus ratione! Distinctio rerum id
-            nesciunt illo!
-          </p>
-          <img className="w-6 h-6" src="/arrow.jpg" alt="arrow" />
+        <div className="flex mt-5 items-center justify-center">
+          <p>{dialogA}</p>
+          <img className="w-6 h-6 ml-4" src="/arrow.jpg" alt="arrow" />
         </div>
       ) : null}
     </div>
